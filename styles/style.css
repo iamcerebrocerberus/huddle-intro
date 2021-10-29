@@ -28,11 +28,14 @@ body {
 }
 
 .huddle-page {
-  margin: 4rem;
+  margin: 2rem;
 }
 
 .head {
-  margin-bottom: 7rem;
+  margin-bottom: 5rem;
+}
+.head__logo {
+  width: 14rem;
 }
 
 main {
@@ -75,7 +78,7 @@ main {
 footer {
   display: flex;
   justify-content: flex-end;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 ul {
