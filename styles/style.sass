@@ -1,0 +1,216 @@
+@use "sass:math"
+
+//variables
+$bg-color: hsl(257, 40%, 49%)
+$btn-txt: hsl(300, 69%, 71%)
+$text: hsl(0, 100%, 100%)
+$def-font: 16
+
+//importing font from google fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap')
+
+
+body,main,header,footer,div,
+p,section,img,button,ul,li
+    margin: 0
+    padding: 0
+    border: 0
+    list-style: none
+    outline: 0
+
+*
+    box-sizing: border-box
+    font-size: #{$def-font}+px
+
+    &,&::before,&::after
+        box-sizing: border-box
+    
+
+body
+    background: url("../images/bg-desktop.svg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-color: $bg-color
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+.huddle-page
+    margin: 4rem
+
+.head
+    margin-bottom: 7rem
+
+main
+    display: flex
+    max-width: math.div(1400,$def-font)+rem
+
+
+.illust
+    &__image
+        max-width: math.div(750,$def-font)+em
+    
+  
+.commun
+    font-family: 'Poppins',sans-serif
+    color: $text
+    padding: 0 3rem 0
+
+    &__head
+        font-size: 2.8rem
+        font-weight: 600
+    
+    &__txt
+        font-size: 1.1rem
+        line-height: 1.7
+    
+
+    &__button
+        font-family: 'Poppins',sans-serif
+        font-size: 1.2rem
+        color: $bg-color
+        margin-top: 2rem
+        padding: 1rem 4rem
+        border-radius: 2rem
+
+        &:hover,&:focus
+            box-shadow: 0 0 3px 1px black
+            transform: scale(1.03)
+            background: $btn-txt
+            color: $text
+        
+    
+
+footer
+    display: flex
+    justify-content: flex-end
+    margin-top: 3rem
+
+ul
+    display: flex
+
+    li
+        margin: .6rem
+    
+
+.fab
+    font-size: 2.5rem
+    color: $text
+
+    &:hover
+        color: $btn-txt
+    
+
+
+@media screen and (max-width: math.div(1422,$def-font)+rem)
+    .head
+        margin-bottom: 5rem
+        &__logo
+            width: math.div(200,$def-font)+em
+        
+    
+    .illust
+        &__image
+            max-width: math.div(550,$def-font)+em
+          
+    .commun
+        &__head
+            font-size: 2rem
+        
+        &__button
+            font-size: 1rem
+            padding: .6rem 2rem
+        
+    .fab
+        font-size: 2rem
+        color: $text
+    
+
+
+@media screen and (max-width: math.div(1160,$def-font)+em)
+    body
+        background-image: url('../images/bg-mobile.svg')
+        background-repeat: no-repeat
+        background-size: contain
+    
+      
+    main
+        flex-direction: column
+        align-items: center
+    
+    .illust
+        &__image
+            max-width: 100%
+        
+    
+    .commun
+        display: flex
+        flex-direction: column
+        justify-content: center
+        text-align: center
+    
+
+    .head
+        margin-bottom: 2rem
+        &__logo
+           min-width: 10em
+        
+    
+    footer
+        justify-content: center
+    
+
+
+@media screen and (max-width: 39em)
+    .huddle-page
+        margin: 2rem 2rem
+    
+    .commun
+        padding: 0
+        margin-top: 2rem
+        &__head
+            font-size: 1.7rem
+            margin-bottom: 1rem
+        
+
+        &__txt
+            font-size: 1.1rem
+        
+    
+
+    .head
+        &__logo
+            width: 2rem
+        
+    .fab
+        font-size: 1.7rem
+
+
+
+@media screen and (max-width: 22.799443em)
+    .commun
+        &__head
+            font-size: 1rem
+        
+    
+
+@media screen and (max-width: 24em)
+    .huddle-page
+        margin: .1rem 1rem
+
+    .head
+        &__logo
+            font-size: .8rem
+
+    .commun
+        &__head
+            font-size: 1.3rem
+        
+
+        &__txt
+            font-size: .93rem
+
+    .fab
+        font-size: 1.4rem
+
